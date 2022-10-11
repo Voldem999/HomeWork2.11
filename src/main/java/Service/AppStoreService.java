@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Service
 public class AppStoreService {
 
-    public List<Item> items = new ArrayList<>();
+    private final List<Item> items = new ArrayList<>();
     private final Basket basket;
 
     public AppStoreService(Basket basket) {

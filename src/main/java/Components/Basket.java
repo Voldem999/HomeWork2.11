@@ -18,7 +18,7 @@ public class Basket {
     }
 
     public void add(List<Item> items) {
-        items.addAll(items);
+        this.items.addAll(items);
     }
 
     public List<Item> get() {

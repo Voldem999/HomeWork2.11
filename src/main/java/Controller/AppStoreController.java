@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/order")
 public class AppStoreController {
 
-    private AppStoreService appStoreService;
+    private final AppStoreService appStoreService;
 
     public AppStoreController(AppStoreService appStoreService) {
         this.appStoreService = appStoreService;
@@ -21,7 +21,7 @@ public class AppStoreController {
 
     @GetMapping("/add")
     public void add(@RequestParam("id") List<Integer> ids) {
-         appStoreService.add(ids);
+         this.appStoreService.add(ids);
 
     }
 
