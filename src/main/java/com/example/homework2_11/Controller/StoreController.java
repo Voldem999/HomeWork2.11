@@ -1,7 +1,7 @@
-package Controller;
+package com.example.homework2_11.Controller;
 
-import Service.AppStoreService;
-import model.Item;
+import com.example.homework2_11.Service.StoreService;
+import com.example.homework2_11.model.Item;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,22 +11,22 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/order")
-public class AppStoreController {
+public class StoreController {
 
-    private final AppStoreService appStoreService;
+    private final StoreService storeService;
 
-    public AppStoreController(AppStoreService appStoreService) {
-        this.appStoreService = appStoreService;
+    public StoreController(StoreService storeService) {
+        this.storeService = storeService;
     }
 
     @GetMapping("/add")
     public void add(@RequestParam("id") List<Integer> ids) {
-         this.appStoreService.add(ids);
+        storeService.add(ids);
 
     }
 
     @GetMapping("/get")
     public List<Item> get() {
-        return appStoreService.get();
+        return storeService.get();
     }
 }

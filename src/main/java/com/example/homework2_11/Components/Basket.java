@@ -1,6 +1,6 @@
-package Components;
+package com.example.homework2_11.Components;
 
-import model.Item;
+import com.example.homework2_11.model.Item;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
